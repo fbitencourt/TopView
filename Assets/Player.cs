@@ -30,9 +30,16 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            var sprint = personagem.GetComponentInChildren<SpriteRenderer>();
+            GameObject duplicate = Instantiate(personagem);
 
-            Instantiate(sprint);
+            foreach (var item in duplicate.GetComponentsInChildren<Camera>())
+                Destroy(item);
+
+            //var sprint = duplicate.GetComponentInChildren<SpriteRenderer>();
+            //var coisa = sprint.GetComponentInChildren<Camera>();
+            //Destroy(coisa);
+
+            //Instantiate(sprint);
 
             //if (!tamanhoCameraOriginal.HasValue)
             //    tamanhoCameraOriginal = MainCamera.orthographicSize;
