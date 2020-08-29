@@ -20,6 +20,8 @@ public class Shooting : MonoBehaviour
     {
         GameObject bulletFired = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletBody = bulletFired.GetComponent<Rigidbody2D>();
+        var sprite = bulletFired.GetComponent<SpriteRenderer>();
+        sprite.sortingOrder = 1;
         bulletBody.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
 }
