@@ -44,3 +44,12 @@ TagManager:
   - name: tiro
     uniqueID: 2014826677
     locked: 0
+  - name: IgnoreProjectile
+    uniqueID: 2140968743
+    locked: 0
+  - name: Player
+    uniqueID: 1705193583
+    locked: 0
+  - name: Projectiles
+    uniqueID: 4291369625
+    locked: 0
